@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Password Generator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p class="heading">Password Generator</p>
+      <div class="passwordBg">
+        <p id="passwordText">Password</p>
+        <img src="./assets/copy.png" alt="copy" class="copy" id="copyImage" />
+      </div>
+      <div class="char-container">
+        <div>
+          <div class="character-length">
+            <p>Character Length</p>
+            <p id="characterNumber">0</p>
+          </div>
+          <input
+            id="passwordLength"
+            type="range"
+            min="0"
+            max="12"
+            value="0"
+            class="range"
+          />
+        </div>
+
+        <div class="checkboxes">
+          <div class="options">
+            <input
+              type="checkbox"
+              value="includeUppercase"
+              id="includeUppercase"
+              class="checkbox"
+            />
+            <label name="includeUppercase">Include Uppercase Letters</label
+            ><br />
+          </div>
+          <div class="options">
+            <input
+              type="checkbox"
+              value="includeLowercase"
+              id="includeLowercase"
+              class="checkbox"
+            />
+            <label name="includeLowercase">Include Lowercase Letters</label
+            ><br />
+          </div>
+          <div class="options">
+            <input
+              type="checkbox"
+              value="includeNumbers"
+              id="includeNumbers"
+              class="checkbox"
+            />
+            <label name="includeNumbers">Include Numbers</label>
+          </div>
+          <div class="options">
+            <input
+              type="checkbox"
+              value="includeSymbols"
+              id="includeSymbols"
+              class="checkbox"
+            />
+            <label name="includeSymbols">Include Symbols</label>
+          </div>
+          <p id="errorMessageChars"></p>
+          <p id="errorMessageCheckbox"></p>
+        </div>
+
+        <div class="strengthBox">
+          <p>Strength</p>
+          <div class="psBox">
+            <p id="passwordStrength"></p>
+            <div id="passwordStrengthBox1"></div>
+            <div id="passwordStrengthBox2"></div>
+            <div id="passwordStrengthBox3"></div>
+            <div id="passwordStrengthBox4"></div>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          id="generatePasswordButton"
+          onclick="generatePassword()"
+        >
+          Generate
+          <img
+            src="./assets/right.png"
+            alt="arrow"
+            class="arrow"
+            width="20"
+            height="20"
+          />
+        </button>
+      </div>
+    </div>
+    <script src="script.js" async defer></script>
+  </body>
+</html>

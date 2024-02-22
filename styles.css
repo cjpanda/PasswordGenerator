@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+:root {
+  --font-family: "Source Code Pro", monospace;
+  --bg-color: #262626;
+  --secondary-bg: #404040;
+  --text-color: #d4d4d4;
+  --primary-color: #86efac;
+}
+
+body {
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--bg-color);
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.heading {
+  text-align: center;
+  padding-bottom: 20px;
+  color: var(--text-color);
+  opacity: 80%;
+  font-size: 20px;
+}
+
+.passwordBg {
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+}
+.copy {
+  object-fit: contain;
+  width: 30px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+#passwordText {
+  padding-left: 15px;
+  opacity: 80%;
+  font-size: x-large;
+}
+
+.char-container {
+  background-color: var(--secondary-bg);
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.character-length {
+  display: flex;
+  justify-content: space-between;
+}
+
+.character-length p {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+#characterNumber {
+  color: var(--primary-color);
+}
+
+.range {
+  width: 100%;
+  height: 5px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--bg-color);
+  outline: none;
+}
+
+/* Style the slider thumb */
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range::-webkit-slider-thumb:hover {
+  background-color: var(--bg-color);
+  border: 2px solid var(--primary-color);
+}
+
+.range::-webkit-slider-thumb:active::-webkit-slider-runnable-track {
+  background-color: var(--primary-color);
+}
+
+#generatePasswordButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  font-size: large;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  color: var(--bg-color);
+}
+
+.checkboxes {
+  margin-top: 20px;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "\2713"; /* Unicode character for checkmark */
+  font-size: 15px; /* Adjust size of the checkmark */
+  font-weight: 600;
+  color: var(--bg-color); /* Change color of the checkmark */
+  display: block; /* Display the checkmark */
+  text-align: center; /* Center the checkmark */
+}
+
+label {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.psBox {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+#passwordStrengthBox1,
+#passwordStrengthBox2,
+#passwordStrengthBox3,
+#passwordStrengthBox4 {
+  display: flex;
+  border: 2px solid var(--text-color);
+  width: 7px;
+  height: 20px;
+  background-color: transparent;
+}
+
+#passwordStrength {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.strengthBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.strengthBox p {
+  font-size: 20px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#errorMessageChars,
+#errorMessageCheckbox {
+  font-style: italic;
+  color: var(--primary-color);
+}
